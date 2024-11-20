@@ -11,25 +11,31 @@ navigation:
       text: "Ideco Center"
   header:
     leftItems:
-      - type: "link"
+      - type: "button"
+        theme: "flat"
+        size: "xl"
         text: "NGFW"
         url: "https://common---gh-aje1kb7heutpt4r3om3o.viewer.diplodoc.com/ru/"
-      - type: "link"
+        target: "_self"
+      - type: "button"
+        theme: "flat"
+        size: "xl"
         text: "VPP"
-        url: "https://common---gh-aje1kb7heutpt4r3om3o.viewer.diplodoc.com/ru/"
-      - type: "link"
+        url: "https://common---gh-ajerkp59lhln1g4251t7.viewer.diplodoc.com/"
+        target: "_self"
+      - type: "button"
+        theme: "flat"
+        size: "xl"
         text: "MY.IDECO"
-        url: "https://common---gh-aje1kb7heutpt4r3om3o.viewer.diplodoc.com/ru/"
+        url: ""
+        target: "_self"
     rightItems:
-      - text: 'Скачать PDF'
-        type: 'link'
-        url: 'https://ideco.ru/'
       - type: controls
-      - type: 'link'
-        text: 'Сайт Ideco'
+      - type: "button"
+        size: "s"
+        theme: "flat"
+        text: 'Скачать PDF'
         url: 'https://ideco.ru/'
-        arrow: true
-        urlTitle: 'Официальный сайт компании Ideco'
 items:
   - name: Рекомендации при первоначальной настройке 
     href: tips-for-initial-setup.md

@@ -38,9 +38,14 @@ jobs:
     needs: upload
     runs-on: ubuntu-latest
     steps:
+      - name: Extract version
+        shell: bash
+        run: echo "version=${GITHUB_HEAD_REF:-${GITHUB_REF#refs/heads/}}" | sed -e 's|stable-|v|g' -e 's|-|.|g' >> $GITHUB_OUTPUT
+        id: extract_version
       - name: Release
         uses: diplodoc-platform/docs-release-action@v2
         with:
+          version: "${{ steps.extract_version.outputs.version }}"
           revision: "${{ github.sha }}"
           storage-bucket: ${{ vars.DIPLODOC_STORAGE_BUCKET }}
           storage-access-key-id: ${{ secrets.DIPLODOC_ACCESS_KEY_ID }}
