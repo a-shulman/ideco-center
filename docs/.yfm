@@ -1,0 +1,13 @@
+allowHTML: true
+langs: ['ru', 'en']
+
+resources:
+  style:
+    - _assets/style/custom.css
+
+docs-viewer:
+  favicon-src: https://storage.yandexcloud.net/teamdocs/image.avif
+  project-name: ideco center
+  no-index: true # Remove this after the public release
+  themes: ['light', 'dark']
+  # metrika: 88962303
